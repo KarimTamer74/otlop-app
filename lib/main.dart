@@ -1,6 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
-import 'package:otlop_app/sign_up_screen.dart';
+import 'package:otlop_app/home_screen.dart';
 
 void main() {
   runApp(OtlopApp());
@@ -11,6 +11,6 @@ class OtlopApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SignUpScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
   }
 }
