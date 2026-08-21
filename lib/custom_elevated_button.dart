@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:otlop_app/app_colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.text});
+  const CustomElevatedButton({super.key, required this.text, this.onPressed});
   final String text;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -15,7 +16,7 @@ class CustomElevatedButton extends StatelessWidget {
         backgroundColor: AppColors.primayClr,
         minimumSize: Size(double.infinity, 50),
       ),
-      onPressed: () {},
+      onPressed:onPressed ,
       child: Text(
         text,
         style: TextStyle(
