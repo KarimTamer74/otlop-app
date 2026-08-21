@@ -7,6 +7,7 @@ import 'package:otlop_app/auth_other_register_section.dart';
 import 'package:otlop_app/custom_elevated_button.dart';
 import 'package:otlop_app/custom_text_button.dart';
 import 'package:otlop_app/forget_pass_section.dart';
+import 'package:otlop_app/home_screen.dart';
 import 'package:otlop_app/titled_text_field.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -63,7 +64,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 //* ForgetPassSection
                 ForgetPassSection(),
 
-                CustomElevatedButton(text: 'Sign Up'),
+                CustomElevatedButton(
+                  text: 'Sign Up',
+                  onPressed: () => Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  ),
+                ),
                 SizedBox(height: 15),
                 AuthDividerRow(),
                 SizedBox(height: 15),

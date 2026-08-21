@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:otlop_app/app_colors.dart';
 import 'package:otlop_app/app_styles.dart';
 import 'package:otlop_app/custom_text_button.dart';
+import 'package:otlop_app/filter_products_screen.dart';
 
 class HomeCategoriesSection extends StatelessWidget {
   const HomeCategoriesSection({super.key});
@@ -32,7 +33,15 @@ class HomeCategoriesSection extends StatelessWidget {
             itemCount: 5,
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          FilterProductsScreen(title: 'Latte'),
+                    ),
+                  );
+                },
                 child: Column(
                   children: [
                     Container(
