@@ -31,28 +31,31 @@ class HomeCategoriesSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: 5,
             itemBuilder: (context, index) {
-              return Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: AppColors.whiteClr,
-                      borderRadius: BorderRadius.circular(16),
+              return InkWell(
+                onTap: () {},
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: AppColors.whiteClr,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: SvgPicture.asset(
+                        'assets/icons/latte_icon.svg',
+                        width: 30,
+                        height: 40,
+                      ),
                     ),
-                    child: SvgPicture.asset(
-                      'assets/icons/latte_icon.svg',
-                      width: 30,
-                      height: 40,
+                    SizedBox(height: 10),
+                    Text(
+                      "Latte",
+                      style: AppStyles.style12.copyWith(
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Latte",
-                    style: AppStyles.style12.copyWith(
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               );
             },
           ),
